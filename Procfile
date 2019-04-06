@@ -1,1 +1,1 @@
-web: gunicorn ccac_project.wsgi
+web: gunicorn template_project.wsgi
