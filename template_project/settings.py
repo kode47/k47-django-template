@@ -27,7 +27,7 @@ SECRET_KEY = 'fr5ozsdps6t#$toxx9m-$a+!jgfwj2m&k1%dqia_^b)%7wqzn)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = (os.environ.get('DEBUG_VALUE') == 'True')
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://k47temp.herokuapp.com']
 
 
 # Application definition
