@@ -30,11 +30,11 @@ cd animal_project
 cd mv template_project animal_project
 ```
 
-5. Open the manage.py file and update line #8
+5. Open the manage.py file and update Line # 8
 
 ```python
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'animal_project.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'animal_project.settings') # Line 8
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -57,11 +57,11 @@ web: gunicorn animal_project.wsgi
 ```
 
 
-7. Open and update line 2 & 14 of the wsgi.py file
+7. Open and update Line 2 & 14 of the wsgi.py file
 
 ```python
 """
-WSGI config for animal_project project.
+WSGI config for animal_project project. # Line 2
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -73,7 +73,7 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'animal_project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'animal_project.settings') # Line 14
 
 application = get_wsgi_application()
 
@@ -82,12 +82,12 @@ application = get_wsgi_application()
 8. Open and update lines 2, , 25, 49 and 67 in the animal_project/settings.py file.
 
 ```bash
-Django settings for animal_project project. # line 2
+Django settings for animal_project project. # Line 2
 
-ALLOWED_HOSTS = ['https://YourAppName.herokuapp.com'] # line 25
+ALLOWED_HOSTS = ['https://YourAppName.herokuapp.com'] # Line 25
 
-ROOT_URLCONF = 'animal_project.urls' # line 49
+ROOT_URLCONF = 'animal_project.urls' # Line 49
 
-SGI_APPLICATION = 'animal_project.wsgi.application' # line 67
+SGI_APPLICATION = 'animal_project.wsgi.application' # Line 67
 ```
 
