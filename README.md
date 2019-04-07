@@ -115,3 +115,95 @@ SECRET_KEY = '4db736c4a169807620d3dcc0d2b5414dcd1bb5c5a100488b' # Line 24
 ```
 
 
+- Activate the virtual environment
+ 
+-  Preprare for deployment
+
+```bash
+$ git remote rm heroku
+```
+
+```bash
+$ git remote rm origin
+```
+
+```bash
+$ git remote rm upstream
+```
+
+- If you're using Gitlab for version control your can create your remote
+  repository as shown below. Otherwise use the Graphical user interface of your
+  favorite repository provider; e.g. Github, Bitbucket, etc.  Also see my past
+  vidoes if you're not sure how to set up a remote repository [here](https://kode47.com)
+
+```bash
+$ git push --set-upstream git@gitlab.com:kcny/animal_project.git master
+```
+
+```bash
+$ git remote add origin git@gitlab.com:kcny/animal_project.git
+```
+
+```bash
+$ pip install -r requirements.txt
+```
+
+```bash
+$ heroku create app_name
+```
+
+```python
+# settings.py
+app.herokuapp.com
+```
+
+
+```bash
+$ git push origin --all
+```
+
+```bash
+$ git push heroku master
+```
+
+
+- Configure Django
+
+```bash
+$ heroku config:set SECRET_KEY="4db736c4a169807620d3dcc0d2b5414dcd1bb5c5a100488b"
+$ heroku config:set DEBUG_VALUE="True"
+```
+
+- Run migrations
+
+```bash
+$ heroku run bash
+
+$ python manage.py makemigrations
+
+$ python  manage.py migrate
+
+$ heroku manage.py createsupersuser # follow the prompts with user name and
+password for your superuser.
+
+$ exit
+
+```
+
+- Open your application in the browser
+
+```bash
+$ heroku open
+```
+
+- Set your debug value to false
+
+```bash
+heroku config:set DEBUG_VALUE="False"
+```
+
+```bash
+$ heroku open
+```
+
+
