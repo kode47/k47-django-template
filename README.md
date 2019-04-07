@@ -1,6 +1,6 @@
 **Name: Kudzai Nyandoro**  
 **Email: kudzai@kode47.com**  
-**Project: K47 Django Project**  
+**Project: Kode47 Django Project**  
 
 - This is a Django 2.2 project with simple static pages providing an easy
   starting point for a Django project. Feel free to use and change it any way
@@ -13,24 +13,24 @@ $ git clone git@github.com:kode47/k47_template.git
 ```
 
 ```bash
-$ mv k47_template animals_project
+$ mv k47_template animal_project
 ```
 
 ```bash
-cd animals_project
+cd animal_project
 ```
 
-- Change the project name to your own.  In this example I'm using 'animals_project'
+- Change the project name to your own.  In this example I'm using 'animal_project'
 
 ```bash
-cd mv template_project animals_project
+cd mv template_project animal_project
 ```
 
 - Open the manage.py file and update line #8
 
 ```python
 def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'animals_project.settings')
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'animal_project.settings')
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
@@ -49,7 +49,7 @@ if __name__ == '__main__':
 - Open and update the Procfile
 
 ```bash
-web: gunicorn animals_project.wsgi
+web: gunicorn animal_project.wsgi
 ```
 
 
@@ -57,7 +57,7 @@ web: gunicorn animals_project.wsgi
 
 ```python
 """
-WSGI config for animals_project project.
+WSGI config for animal_project project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -69,21 +69,21 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'animals_project.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'animal_project.settings')
 
 application = get_wsgi_application()
 
 ```
 
-- Open and update lines 2, , 25, 49 and 67 in the animals_project/settings.py file.
+- Open and update lines 2, , 25, 49 and 67 in the animal_project/settings.py file.
 
 ```bash
-Django settings for animals_project project. # line 2
+Django settings for animal_project project. # line 2
 
 ALLOWED_HOSTS = ['https://YourAppName.herokuapp.com'] # line 25
 
-ROOT_URLCONF = 'animals_project.urls' # line 49
+ROOT_URLCONF = 'animal_project.urls' # line 49
 
-SGI_APPLICATION = 'animals_project.wsgi.application' # line 67
+SGI_APPLICATION = 'animal_project.wsgi.application' # line 67
 ```
 
