@@ -66,10 +66,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'template_project.wsgi.application'
 
-
-# Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
+# SQLite3 Database
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -77,6 +75,19 @@ DATABASES = {
     }
 }
 
+# OPTIONAL PostgreSQL Database set up.  Uncomment to use.
+# Update the NAME, USER & PASSWORD for your application.
+"""
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ReplaceWithYourDataBaseName',
+        'USER': 'ReplaceWithYourDataBaseUserName',
+        'PASSWORD': 'ReplaceWithYourDataBasePassword',
+        'HOST': 'localhost'
+    }
+}
+"""
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -95,7 +106,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
