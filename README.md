@@ -2,9 +2,9 @@
 **Email: kudzai@kode47.com**  
 **Project: Kode47 Django Project**  
 
-- This is a Django 2.2 project with simple static pages providing an easy
-  starting point for a Django project. Feel free to use and change it any way
-  you like. Below are some import notes that might help with the set up.
+- This is a Django 2.2 project with simple static pages providing an easy  
+  starting point for a Django project. Feel free to use and change it any way  
+  you like. Below are some import notes that might help with the set up.  
   
 1. Clone the application 
 
