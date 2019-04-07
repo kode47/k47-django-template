@@ -115,92 +115,109 @@ SECRET_KEY = '4db736c4a169807620d3dcc0d2b5414dcd1bb5c5a100488b' # Line 24
 ```
 
 
-- Activate the virtual environment
+11. Activate the virtual environment
  
 -  Preprare for deployment
+
+
+12. Remove current Heroku settings, you might not need to do this.
 
 ```bash
 $ git remote rm heroku
 ```
 
+13. Remove the current git origin
+
 ```bash
 $ git remote rm origin
 ```
 
-```bash
-$ git remote rm upstream
-```
-
-- If you're using Gitlab for version control your can create your remote
+14.  If you're using Gitlab for version control your can create your remote
   repository as shown below. Otherwise use the Graphical user interface of your
   favorite repository provider; e.g. Github, Bitbucket, etc.  Also see my past
   vidoes if you're not sure how to set up a remote repository [here](https://kode47.com)
 
+
+15. Send you application to version control on GitLab.
+ 
 ```bash
 $ git push --set-upstream git@gitlab.com:kcny/animal_project.git master
 ```
+
+16. Add the origin
 
 ```bash
 $ git remote add origin git@gitlab.com:kcny/animal_project.git
 ```
 
+17. Install all application requirements.
+
 ```bash
 $ pip install -r requirements.txt
 ```
+
+18. Create a Heroku app name
 
 ```bash
 $ heroku create app_name
 ```
 
-```python
-# settings.py
-app.herokuapp.com
-```
-
-
-```bash
-$ git push origin --all
-```
-
+19. Push to Heroku
 ```bash
 $ git push heroku master
 ```
 
-
-- Configure Django
+20. Configure Django on Heroku
 
 ```bash
 $ heroku config:set SECRET_KEY="4db736c4a169807620d3dcc0d2b5414dcd1bb5c5a100488b"
 $ heroku config:set DEBUG_VALUE="True"
 ```
-
-- Run migrations
+ 
+21. Inter into the Heroku shell
 
 ```bash
 $ heroku run bash
-
-$ python manage.py makemigrations
-
-$ python  manage.py migrate
-
-$ heroku manage.py createsupersuser # follow the prompts with user name and
-password for your superuser.
-
-$ exit
-
 ```
 
-- Open your application in the browser
+22. Make migrations
+```bash
+$ python manage.py makemigrations
+```
+
+23. Run migrations
+
+```bash
+$ python  manage.py migrate
+````
+
+24. Create a superuser. This is optional.
+
+```bash
+$ heroku manage.py createsupersuser # follow the prompts with user name and
+password for your superuser.
+```
+
+
+25. Exit the Heroku shell
+
+```bash
+$ exit
+```
+
+26. Open your application in the browser
 
 ```bash
 $ heroku open
 ```
 
-- Set your debug value to false
+27. Set your debug value to false
 
 ```bash
 heroku config:set DEBUG_VALUE="False"
 ```
+
+28. Open you Heroku app in the browser
 
 ```bash
 $ heroku open
