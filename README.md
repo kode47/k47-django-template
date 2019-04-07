@@ -27,6 +27,49 @@ $ mv k47_template animal_project
 ```bash
 cd animal_project
 ```
+-  Preprare for deployment
+
+- Remove current Heroku settings, you might not need to do this.
+
+```bash
+$ git remote rm heroku
+```
+
+- Remove the current git origin
+
+```bash
+$ git remote rm origin
+```
+
+-  If you're using Gitlab for version control your can create your remote
+  repository as shown below. Otherwise use the Graphical user interface of your
+  favorite repository provider; e.g. Github, Bitbucket, etc.  Also see my past
+  vidoes if you're not sure how to set up a remote repository [here](https://kode47.com)
+
+
+- Send you application to version control on GitLab.
+ 
+```bash
+$ git push --set-upstream git@gitlab.com:kcny/animal_project.git master
+```
+
+- Add the origin
+
+```bash
+$ git remote add origin git@gitlab.com:kcny/animal_project.git
+```
+
+- Install all application requirements.
+
+```bash
+$ pip install -r requirements.txt
+```
+
+- Create a Heroku app name
+
+```bash
+$ heroku create app_name
+```
 - Generate a new secret key and add it to the settings.py file or export to
    your .bash_profile.
 
@@ -76,7 +119,6 @@ if __name__ == '__main__':
 ```bash
 web: gunicorn animal_project.wsgi
 ```
-
 
 - Open and update Line 2 & 14 of the wsgi.py file
 
@@ -130,50 +172,6 @@ SECRET_KEY = '4db736c4a169807620d3dcc0d2b5414dcd1bb5c5a100488b' # Line 24
 
 - Activate the virtual environment
  
--  Preprare for deployment
-
-
-- Remove current Heroku settings, you might not need to do this.
-
-```bash
-$ git remote rm heroku
-```
-
-- Remove the current git origin
-
-```bash
-$ git remote rm origin
-```
-
--  If you're using Gitlab for version control your can create your remote
-  repository as shown below. Otherwise use the Graphical user interface of your
-  favorite repository provider; e.g. Github, Bitbucket, etc.  Also see my past
-  vidoes if you're not sure how to set up a remote repository [here](https://kode47.com)
-
-
-- Send you application to version control on GitLab.
- 
-```bash
-$ git push --set-upstream git@gitlab.com:kcny/animal_project.git master
-```
-
-- Add the origin
-
-```bash
-$ git remote add origin git@gitlab.com:kcny/animal_project.git
-```
-
-- Install all application requirements.
-
-```bash
-$ pip install -r requirements.txt
-```
-
-- Create a Heroku app name
-
-```bash
-$ heroku create app_name
-```
 
 - Push to Heroku
 ```bash
