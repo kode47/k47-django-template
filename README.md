@@ -1,6 +1,6 @@
-**Name: Kudzai Nyandoro**
-**Email: kudzai@kode47.com**
-**Project: K47 Django Project**
+**Name: Kudzai Nyandoro**  
+**Email: kudzai@kode47.com**  
+**Project: K47 Django Project**  
 
 - This is a Django 2.2 project with simple static pages providing an easy
   starting point for a Django project. Feel free to use and change it any way
