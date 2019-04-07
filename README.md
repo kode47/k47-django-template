@@ -4,9 +4,30 @@
 
 - This is a Django 2.2 project with simple static pages providing an easy  
   starting point for a Django project. Feel free to use and change it any way  
-  you like. Below are some import notes that might help with the set up.  
+  you like. Below are some import notes that might help with the set up.
+
+1. These notes assume you're on a Unix based system.  The first step is to set
+   up  your environment variables.  Open your .bash_profile file if you are on a
+   Mac or Linux and add the follow lines.
+
+2. Generate a new secret key and add it to the settings.py file or export to
+   your .bash_profile.
+
+```bash
+$ python
+>>> import secrets
+>>> secrets.token_hex(24)
+'4db736c4a169807620d3dcc0d2b5414dcd1bb5c5a100488b'
+```
   
-1. Clone the application 
+
+```bash
+# .bash_profile
+
+export SECRET_KEY="4db736c4a169807620d3dcc0d2b5414dcd1bb5c5a100488b"
+export DEBUG_VALUE="True"
+```
+2. Clone the application 
 
 ```bash
 $ git clone git@github.com:kode47/k47_template.git
@@ -91,14 +112,6 @@ ROOT_URLCONF = 'animal_project.urls' # Line 49
 SGI_APPLICATION = 'animal_project.wsgi.application' # Line 67
 ```
 
-9. Generate a new secret key and add it to settings.py or your environment variable.
-
-```bash
-$ python
->>> import secrets
->>> secrets.token_hex(24)
-'4db736c4a169807620d3dcc0d2b5414dcd1bb5c5a100488b'
-```
 
 10. Copy and replace line number 24 in your setting.py file with it.
 
