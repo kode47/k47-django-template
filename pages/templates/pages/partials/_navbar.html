@@ -1,7 +1,11 @@
+{% load static %}
 <header>
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="#">K47</a>
+    <a class="navbar-brand" href="{% url 'home' %}">
+      <img src="{% static 'pages/img/logo.jpg' %}" class="logo" alt="Kode47">
+    </a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
