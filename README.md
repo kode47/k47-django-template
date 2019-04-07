@@ -12,21 +12,25 @@
 $ git clone git@github.com:kode47/k47_template.git
 ```
 
+2. Change the name of repository folder
+
 ```bash
 $ mv k47_template animal_project
 ```
 
+3. Change directory into your new folder
+ 
 ```bash
 cd animal_project
 ```
 
-- Change the project name to your own.  In this example I'm using 'animal_project'
+4. Change the project name to your own.  In this example I'm using 'animal_project'
 
 ```bash
 cd mv template_project animal_project
 ```
 
-- Open the manage.py file and update line #8
+5. Open the manage.py file and update line #8
 
 ```python
 def main():
@@ -46,14 +50,14 @@ if __name__ == '__main__':
     main()
 ```
  
-- Open and update the Procfile
+6. Open and update the Procfile
 
 ```bash
 web: gunicorn animal_project.wsgi
 ```
 
 
-- Open and update line 2 & 14 of the wsgi.py file
+7. Open and update line 2 & 14 of the wsgi.py file
 
 ```python
 """
@@ -75,7 +79,7 @@ application = get_wsgi_application()
 
 ```
 
-- Open and update lines 2, , 25, 49 and 67 in the animal_project/settings.py file.
+8. Open and update lines 2, , 25, 49 and 67 in the animal_project/settings.py file.
 
 ```bash
 Django settings for animal_project project. # line 2
