@@ -152,21 +152,6 @@ ROOT_URLCONF = 'animal_project.urls' # Line 49
 
 SGI_APPLICATION = 'animal_project.wsgi.application' # Line 67
 ```
-
-- Copy and replace line number 24 in your setting.py file with it.
-
-```python
-.
-.
-.
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '4db736c4a169807620d3dcc0d2b5414dcd1bb5c5a100488b' # Line 24
-.
-.
-.
-```
-
 - Push to Heroku
 ```bash
 $ git push heroku master
