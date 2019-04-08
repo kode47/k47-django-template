@@ -23,13 +23,6 @@ $ mv k47_template animal_project
 ```bash
 cd animal_project
 ```
--  Preprare for deployment
-
-- Remove current Heroku settings, you might not need to do this.
-
-```bash
-$ git remote rm heroku
-```
 
 - Rename the current git origin
 
