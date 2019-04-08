@@ -35,17 +35,16 @@ cd animal_project
 $ git remote rm heroku
 ```
 
-- Remove the current git origin
+- Rename the current git origin
 
 ```bash
-$ git remote rm origin
+$ git remote rename origin upstream
 ```
 
 -  If you're using Gitlab for version control your can create your remote
   repository as shown below. Otherwise use the Graphical user interface of your
   favorite repository provider; e.g. Github, Bitbucket, etc.  Also see my past
   vidoes if you're not sure how to set up a remote repository [here](https://kode47.com)
-
 
 - Send you application to version control on GitLab.
  
@@ -58,7 +57,6 @@ $ git push --set-upstream git@gitlab.com:kcny/animal_project.git master
 ```bash
 $ git remote add origin git@gitlab.com:kcny/animal_project.git
 ```
-
 - Install all application requirements.
 
 ```bash
@@ -79,7 +77,8 @@ $ python
 >>> secrets.token_hex(24)
 '4db736c4a169807620d3dcc0d2b5414dcd1bb5c5a100488b'
 ```
-  
+
+- Add the following to your .bash_profile
 
 ```bash
 # .bash_profile
@@ -154,6 +153,20 @@ ROOT_URLCONF = 'animal_project.urls' # Line 49
 SGI_APPLICATION = 'animal_project.wsgi.application' # Line 67
 ```
 
+- Copy and replace line number 24 in your setting.py file with it.
+
+```python
+.
+.
+.
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '4db736c4a169807620d3dcc0d2b5414dcd1bb5c5a100488b' # Line 24
+.
+.
+.
+```
+
 - Push to Heroku
 ```bash
 $ git push heroku master
@@ -163,9 +176,9 @@ $ git push heroku master
 
 ```bash
 $ heroku config:set SECRET_KEY="4db736c4a169807620d3dcc0d2b5414dcd1bb5c5a100488b"
-$ heroku config:set DEBUG_VALUE="True" # We will set this to False at the end.
+$ heroku config:set DEBUG_VALUE="True" # Set to "False" after testing app.
 ```
- 
+
 - Inter into the Heroku shell
 
 ```bash
@@ -173,6 +186,7 @@ $ heroku run bash
 ```
 
 - Make migrations
+
 ```bash
 $ python manage.py makemigrations
 ```
@@ -186,10 +200,8 @@ $ python  manage.py migrate
 - Create a superuser. This is optional.
 
 ```bash
-$ heroku manage.py createsupersuser # follow the prompts with user name and
-password for your superuser.
+$ heroku manage.py createsupersuser # Follow the prompts
 ```
-
 
 - Exit the Heroku shell
 
@@ -209,10 +221,11 @@ $ heroku open
 heroku config:set DEBUG_VALUE="False"
 ```
 
-- Open you Heroku app in the browser
+- Open your Heroku app in the browser
 
 ```bash
 $ heroku open
 ```
+
 
 
