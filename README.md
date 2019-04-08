@@ -5,31 +5,27 @@
 - This is a Django 2.2 project with simple static pages providing an easy starting point for a Django project. Feel free to use and change it any way you like. Below are some import notes that might help with the set up.
 
 - These notes assume you're on a Unix based machine.  The first step is to set up  your environment variables.  Open your .bash_profile file if you are on a Mac or Linux and add the follow lines.
-
+ 
 - Clone the application 
 
 ```bash
 $ git clone git@github.com:kode47/k47_template.git
 ```
-
 - Change the name of repository folder
 
 ```bash
 $ mv k47_template animal_project
 ```
-
 - Change directory into your new folder
  
 ```bash
 cd animal_project
 ```
-
 - Rename the current git origin
 
 ```bash
 $ git remote rename origin upstream
 ```
-
 -  If you're using Gitlab for version control your can create your remote
   repository as shown below. Otherwise use the Graphical user interface of your
   favorite repository provider; e.g. Github, Bitbucket, etc.  Also see my past
@@ -41,22 +37,16 @@ $ git remote rename origin upstream
 ```bash
 $ git push --set-upstream git@gitlab.com:kcny/animal_project.git master
 ```
-
 - Add the origin
 
 ```bash
 $ git remote add origin git@gitlab.com:kcny/animal_project.git
 ```
+
 - Install all application requirements.
 
 ```bash
 $ pip install -r requirements.txt
-```
-
-- Create a Heroku app name
-
-```bash
-$ heroku create app_name
 ```
 - Generate a new secret key and add it to the settings.py file or export to
    your .bash_profile.
@@ -67,7 +57,6 @@ $ python
 >>> secrets.token_hex(24)
 '4db736c4a169807620d3dcc0d2b5414dcd1bb5c5a100488b'
 ```
-
 - Add the following to your .bash_profile
 
 ```bash
@@ -76,13 +65,11 @@ $ python
 export SECRET_KEY="4db736c4a169807620d3dcc0d2b5414dcd1bb5c5a100488b"
 export DEBUG_VALUE="True"
 ```
-
 - Change the project name to your own.  In this example I'm using 'animal_project'
 
 ```bash
 cd mv template_project animal_project
 ```
-
 - Open the manage.py file and update Line # 8
 
 ```python
@@ -108,7 +95,6 @@ if __name__ == '__main__':
 ```bash
 web: gunicorn animal_project.wsgi
 ```
-
 - Open and update Line 2 & 14 of the wsgi.py file
 
 ```python
@@ -142,65 +128,60 @@ ROOT_URLCONF = 'animal_project.urls' # Line 49
 
 SGI_APPLICATION = 'animal_project.wsgi.application' # Line 67
 ```
-- Push to Heroku
+
 ```bash
-$ git push heroku master
+$ git add -A
+$ git commit -m "Rename application ready to deploy."
+$ git push 
 ```
 
+- Create a Heroku app name
+
+```bash
+$ heroku create app_name
+```
 - Configure Django on Heroku
 
 ```bash
 $ heroku config:set SECRET_KEY="4db736c4a169807620d3dcc0d2b5414dcd1bb5c5a100488b"
-$ heroku config:set DEBUG_VALUE="True" # Set to "False" after testing app.
+$ heroku config:set DEBUG_VALUE="False"
 ```
+- Push to Heroku
 
+```bash
+$ git push heroku master
+```
 - Inter into the Heroku shell
 
 ```bash
 $ heroku run bash
 ```
-
 - Make migrations
 
 ```bash
 $ python manage.py makemigrations
 ```
-
 - Run migrations
 
 ```bash
 $ python  manage.py migrate
 ````
-
 - Create a superuser. This is optional.
 
 ```bash
 $ heroku manage.py createsupersuser # Follow the prompts
 ```
-
 - Exit the Heroku shell
 
 ```bash
 $ exit
 ```
-
 - Open your application in the browser
 
 ```bash
 $ heroku open
 ```
 
-- Set your debug value to false
-
-```bash
-heroku config:set DEBUG_VALUE="False"
-```
-
-- Open your Heroku app in the browser
-
-```bash
-$ heroku open
-```
 
 
 
