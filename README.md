@@ -33,7 +33,8 @@ $ git remote rename origin upstream
 -  If you're using Gitlab for version control your can create your remote
   repository as shown below. Otherwise use the Graphical user interface of your
   favorite repository provider; e.g. Github, Bitbucket, etc.  Also see my past
-  vidoes if you're not sure how to set up a remote repository [here](https://kode47.com)
+  vidoes if you're not sure how to set up a remote repository
+  [here](https://kode47.com).
 
 - Send you application to version control on GitLab.
  
