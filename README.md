@@ -16,7 +16,7 @@ git clone git@github.com:kode47/k47-django-template.git
 - Optional -- change the name of repository folder
 
 ```bash
-$ mv k47_template animal_project
+$ mv kode47/k47-django-template animal_project
 ```
 - Change directory into your new folder
  
