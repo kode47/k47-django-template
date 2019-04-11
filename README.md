@@ -11,7 +11,7 @@
 - Clone the application 
 
 ```bash
-$ git clone git@github.com:kode47/k47_template.git
+git clone git@github.com:kode47/k47-django-template.git
 ```
 - Optional -- change the name of repository folder
 
