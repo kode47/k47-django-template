@@ -23,11 +23,22 @@ $ mv kode47/k47-django-template animal_project
 ```bash
 cd animal_project
 ```
+
+- Recommended option --create your virtaul enviroment.  There are many ways
+  create a virtual environment so I'll leave that up to you.  
+
 - Install all application requirements.
 
 ```bash
 $ pip install -r requirements.txt
 ```
+
+- Run migrations 
+
+```bash
+$  python manage.py make migrations
+```
+
 - Generate a new secret key and add it to the settings.py file or export to
    your .bash_profile.
 
