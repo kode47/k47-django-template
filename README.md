@@ -98,70 +98,6 @@ $ git push --set-upstream git@gitlab.com:kode47/animal_project.git master
 $ git remote add origin git@gitlab.com:kode47/animal_project.git
 ```
 
-- Change the project name to your own.  In this example I'm using 'animal_project'
-
-```bash
-cd mv template_project animal_project
-```
-- Open the manage.py file and update Line # 8
-
-```python
-def main():
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'animal_project.settings') # Line 8
-    try:
-        from django.core.management import execute_from_command_line
-    except ImportError as exc:
-        raise ImportError(
-            "Couldn't import Django. Are you sure it's installed and "
-            "available on your PYTHONPATH environment variable? Did you "
-            "forget to activate a virtual environment?"
-        ) from exc
-    execute_from_command_line(sys.argv)
-
-
-if __name__ == '__main__':
-    main()
-```
- 
-- Open and update the Procfile
-
-```bash
-web: gunicorn animal_project.wsgi
-```
-- Open and update Line 2 & 14 of the wsgi.py file
-
-```python
-"""
-WSGI config for animal_project project. # Line 2
-
-It exposes the WSGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/2.2/howto/deployment/wsgi/
-"""
-
-import os
-
-from django.core.wsgi import get_wsgi_application
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'animal_project.settings') # Line 14
-
-application = get_wsgi_application()
-
-```
-
-- Open and update lines 2, , 25, 49 and 67 in the animal_project/settings.py file.
-
-```bash
-Django settings for animal_project project. # Line 2
-
-ALLOWED_HOSTS = ['https://YourAppName.herokuapp.com'] # Line 25
-
-ROOT_URLCONF = 'animal_project.urls' # Line 49
-
-SGI_APPLICATION = 'animal_project.wsgi.application' # Line 67
-```
-
 ```bash
 $ git add -A
 $ git commit -m "Rename application ready to deploy."
@@ -202,7 +138,7 @@ $ python  manage.py migrate
 - Create a superuser. This is optional.
 
 ```bash
-$ heroku manage.py createsupersuser # Follow the prompts
+$ python manage.py createsuperuser # Follow the prompts
 ```
 - Exit the Heroku shell
 
