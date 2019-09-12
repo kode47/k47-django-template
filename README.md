@@ -4,7 +4,7 @@
 
 ### Django Template Initial Set up
 
-- This is a Django 2.2 project with simple static pages providing an easy starting point for a Django project. Feel free to use and change it any way you like. Below are some import notes that might help with the set up.
+- This is a Django 2.2.5 project with simple static pages providing an easy starting point for a Django project. Feel free to use and change it any way you like. Below are some import notes that might help with the set up.
 
 - These notes assume you're on a Unix based machine.  The first step is to set up  your environment variables.  Open your .bash_profile file if you are on a Mac or Linux and add the follow lines.
  
