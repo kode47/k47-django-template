@@ -98,7 +98,7 @@ $ git push --set-upstream git@gitlab.com:kcny/animal_project.git master
 - Add the origin
 
 ```bash
-$ git remote add origin git@gitlab.com:kode47/animal_project.git
+$ git remote add origin git@gitlab.com:kcny/animal_project.git
 ```
 
 ```bash
