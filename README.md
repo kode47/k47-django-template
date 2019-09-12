@@ -85,12 +85,15 @@ $ git push -u origin master
 
 **Or push to Gitlab**
 
--  If you're using Gitlab for version control your can create your remote repository as shown below without leaving your console.  I'm not sure how to do this on Github.  You can also visit [my blog](https://kode47.com) and watch episode 22 for more on Gitlab. Be sure to replace `kode47` with your username in the lines below. This is an optional way of creating your remote repository on GitLab.
+-  If you're using Gitlab for version control your can create your remote
+   repository as shown below without leaving your console.  I'm not sure how to
+   do this on Github.  You can also visit [my blog](https://kode47.com) and
+   watch episode 22 for more on Gitlab. Be sure to replace `kcny` with your username in the lines below. This is an optional way of creating your remote repository on GitLab.
 
 - Send your application to version control on GitLab.
  
 ```bash
-$ git push --set-upstream git@gitlab.com:kode47/animal_project.git master
+$ git push --set-upstream git@gitlab.com:kcny/animal_project.git master
 ```
 - Add the origin
 
