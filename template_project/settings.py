@@ -85,9 +85,9 @@ DATABASES = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ReplaceWithYourDataBaseName',
-        'USER': 'ReplaceWithYourDataBaseUserName',
-        'PASSWORD': 'ReplaceWithYourDataBasePassword',
+        'NAME': os.environ.get('TEST_DB'),
+        'USER': os.environ.get('PSQL_USER'),
+        'PASSWORD': os.environ.get('PSQL_PASSWORD'),
         'HOST': 'localhost'
     }
 }
