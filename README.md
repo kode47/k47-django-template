@@ -1,5 +1,5 @@
 **Name: Kudzai Nyandoro**  
-**Email: kudzai@kode47.com**  
+**Email: kudzai@example.com**  
 **Project: Kode47 Django Project**  
 
 ### Django Template Initial Set up
